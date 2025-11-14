@@ -1,0 +1,10 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+.post-card {
+    background: #f6f6f6;
+    padding: 15px;
+    border-radius: 5px;
+}

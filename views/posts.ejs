@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h1>Blog Posts</h1>
+
+<% if (posts.length === 0) { %>
+    <p>No posts available.</p>
+<% } else { %>
+
+    <% posts.forEach(post => { %>
+        <div class="post-card">
+            <h2><%= post.title %></h2>
+            <p><%= post.content %></p>
+            <small>
+                Author: <strong><%= post.username %></strong> <br>
+                Posted on: <%= post.created_at.toLocaleString() %>
+            </small>
+        </div>
+        <hr>
+    <% }) %>
+
+<% } %>
+
+</body>
+</html>
